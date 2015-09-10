@@ -1,0 +1,43 @@
+\pagestyle{empty}
+\pagenumbering{Roman}
+\newgeometry{ignoreheadfoot}
+
+\begin{titlepage}
+
+\begin{center}
+\textbf{\huge \reporttype}
+
+\vspace{1cm}
+{\large \reporttopic}
+\end{center}
+
+\vspace{1cm}
+\begin{tabular}{>{\bfseries}p{4cm}ll}
+Vorgelegt am: & \submissiondate{} \vspace{1cm} \\
+Von: & \textbf{\authoronename{}} \\
+& \authoroneaddress{} \\
+& \authoronepostalcity{} \vspace{1cm} \\
+Studiengang: & \studypath{} \\
+Studienrichtung: & \authoronestudybranch{} \vspace{1cm} \\
+Seminargruppe: & \studygroup \vspace{1cm} \\
+Matrikelnummer: & \authoronestudentnumber{} \vspace{1cm} \\
+Praxispartner: & \companyname{} \\
+& \companyaddress{} \\
+& \companypostalcity{} \vspace{1cm} \\
+Gutachter: & \companyreviewername{} & \\
+& (\companyname{}) & \\
+& \universityreviewername{} & \\
+& (Staatliche Studienakademie Glauchau) & \\
+\end{tabular}
+
+\end{titlepage}
+
+\clearpage
+
+\restoregeometry
+\pagestyle{report-page}
+\spacing{1.3}
+
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\renewcommand{\subsectionmark}[1]{\markright{#1}{}}

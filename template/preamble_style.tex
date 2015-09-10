@@ -1,0 +1,31 @@
+\fancypagestyle{report-page}{
+    \fancyhf{}
+    \fancyhead[R]{\rightmark}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \fancyfoot[R]{Seite \thepage}
+    \renewcommand{\footrulewidth}{0.4pt}
+}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[R]{\leftmark}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \fancyfoot[R]{Seite \thepage}
+    \renewcommand{\footrulewidth}{0.4pt}
+}
+
+\setlength{\footnotesep}{10pt}
+
+\definecolor{brown}{RGB}{204,102,0}
+\definecolor{darkgreen}{RGB}{0,102,0}
+
+\lstdefinestyle{coloredpython}{
+    breaklines=true,
+    language=Python,
+    showspaces=false,
+    showstringspaces=false,
+    basicstyle=\footnotesize,
+    commentstyle=\color{darkgreen},
+    keywordstyle=\color{blue},
+    stringstyle=\color{brown},
+}

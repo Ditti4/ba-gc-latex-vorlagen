@@ -1,0 +1,67 @@
+\newboolean{inhaltsverzeichnis}
+\newboolean{abkuerzungsverzeichnis}
+\newboolean{tabellenverzeichnis}
+\newboolean{abbildungsverzeichnis}
+\newboolean{formelverzeichnis}
+\newboolean{themenvorschlag}
+\newboolean{literaturverzeichnis}
+
+\newcommand{\settype}[1]{
+	\newcommand{\reporttype}{#1}
+}
+
+\newcommand{\settopic}[1]{
+	\newcommand{\reporttopic}{#1}
+}
+
+\newcommand{\setsubmissiondate}[1]{
+	\newcommand{\submissiondate}{#1}
+}
+
+\newcommand{\setstudypath}[1]{
+	\newcommand{\studypath}{#1}
+}
+
+\newcommand{\setstudygroup}[1]{
+	\newcommand{\studygroup}{#1}
+}
+
+\newcommand{\setauthorone}[5]{
+	\newcommand{\authoronename}{#1}
+	\newcommand{\authoroneaddress}{#2}
+	\newcommand{\authoronepostalcity}{#3}
+	\newcommand{\authoronestudentnumber}{#4}
+	\newcommand{\authoronestudybranch}{#5}
+}
+
+\newcommand{\setauthortwo}[5]{
+	\newcommand{\authortwoname}{#1}
+	\newcommand{\authortwoaddress}{#2}
+	\newcommand{\authortwopostalcity}{#3}
+	\newcommand{\authortwostudentnumber}{#4}
+	\newcommand{\authortwostudybranch}{#5}
+}
+
+\newcommand{\setauthorthree}[5]{
+	\newcommand{\authorthreename}{#1}
+	\newcommand{\authorthreeaddress}{#2}
+	\newcommand{\authorthreepostalcity}{#3}
+	\newcommand{\authorthreestudentnumber}{#4}
+	\newcommand{\authorthreestudybranch}{#5}
+}
+
+\newcommand{\setcompanyinfo}[3]{
+	\newcommand{\companyname}{#1}
+	\newcommand{\companyaddress}{#2}
+	\newcommand{\companypostalcity}{#3}
+}
+
+\newcommand{\setcompanyreviewer}[1]{
+	\newcommand{\companyreviewername}{#1}
+}
+
+\newcommand{\setunireviewer}[1]{
+	\newcommand{\universityreviewername}{#1}
+}
+
+\newcounter{authorcount}

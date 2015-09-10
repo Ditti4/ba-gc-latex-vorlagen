@@ -1,0 +1,82 @@
+% Präambel, um alle Dokumentendefinitionen durchzuführen
+
+% Vorgabe der BA-Glauchau: Schriftgroesse: 12pt, A4. Blocksatz
+\documentclass[fontsize=12pt, paper=a4, utf8]{scrartcl}
+
+% Vorgabe der BA-Glauchau: Raender links 2.5cm, rechts 2.5cm, oben 2cm, unten 2cm
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2cm, bottom=2cm, bindingoffset=5mm, footskip=20pt, includeheadfoot]{geometry}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% Rand ist Rand und kein Gartentor.
+\usepackage{microtype}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Arbeitslaptop-Hack
+\renewcommand{\sfdefault}{phv}
+\renewcommand{\rmdefault}{phv}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% korrekter wäre
+%\usepackage{uarial}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% benötigt, um gesamte Tabellenspalte z.B. fett darzustellen
+\usepackage{array}
+% yay, fancy stuff (Header und Footer)
+\usepackage{fancyhdr}
+% Lorem Ipsum is love, Lorem Ipsum is life
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{forloop}
+% sollte irgendwann mal irgendjemand \textsubscript brauchen
+\usepackage{fixltx2e}
+% Paketname sprich für sich
+\usepackage{ifthen}
+% colorlinks = true, damit kein hässlicher Rahmen um die Links herum entsteht
+\usepackage[linkcolor=black, urlcolor=black, citecolor=black, colorlinks=true]{hyperref}
+% auf Rechnern mit Biber bitte den backend-Parameter entfernen, ist nur wieder
+% ein kleiner Hack für meinen Arbeitslaptop
+\usepackage[backend=bibtex]{biblatex}
+% benötigt für sectionbreak
+\usepackage{titlesec}
+% Inline-Code-Snippets
+\usepackage{listings}
+% "In Farbe und bunt."
+\usepackage{color}
+% ToDo-Stuff, recht offensichtlich
+\usepackage{todonotes}
+% Zum Einbinden des Themenvorschlags
+\usepackage{pdfpages}
+
+% fortlaufende Fußnotennummerierung unabhängig vom Kapitel
+% nur bei scrreprt/report nötig
+% \counterwithout{footnote}{section}
+
+% neue Seite bei jedem Kapitel
+% \chapter gibt es bei article nicht, deswegen sectionbreak
+\newcommand{\sectionbreak}{\clearpage}
+
+% wiederholt Zeichenketten gewünscht oft
+% wird z.B. in der ehrenwörtlichen Erklärung verwendet
+\newcounter{charcounter}
+\newcommand{\rpt}[2]{
+    \forloop{charcounter}{0}{\value{charcounter} < #1}{#2}
+}
+
+% Standardschriftartenfamilie auf Sans Serif festlegen
+\renewcommand{\familydefault}{\sfdefault}
+
+% kein Absatzeinschub
+\setlength{\parindent}{0mm}
+
+% Befehle für das Titelblatt einbinden
+\input{template/preamble_title_cmds}
+
+% Header- und Footer-Style festlegen
+\input{template/preamble_style}
+
+% ursprünglich für urldate genutzt, nun nicht mehr
+% wird vielleicht aber irgendwann nochmal nützlich, deswegen bleibt es
+\newcommand{\swallowarialspace}{\kern-0.55ex}
+
+% Definitionen und Befehle für das Literatütenverzeichnis
+\input{template/preamble_bib}

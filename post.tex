@@ -1,0 +1,12 @@
+\ifthenelse{\boolean{literaturverzeichnis}} {
+        \clearpage
+        \printbibliography
+}{}
+
+\ifthenelse{\value{authorcount} = 1}{
+        \include{template/ehrenwoertliche_erklaerung}
+}{
+        \include{template/ehrenwoertliche_erklaerung_multi}
+}
+
+\end{document}

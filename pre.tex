@@ -1,0 +1,26 @@
+\input{template/preamble}
+
+\input{reportsettings}
+
+\ifthenelse{\boolean{literaturverzeichnis}} {
+    \addbibresource{\jobname.bib}
+}{}
+
+\begin{document}
+
+\ifthenelse{\value{authorcount} = 1} {
+    \input{template/titelblatt}
+}{
+    \input{template/titelblatt_multi}
+}
+
+\ifthenelse{\boolean{themenvorschlag}} {
+    \includepdf[pages={1}]{Themenvorschlag.pdf}
+} {}
+
+\ifthenelse{\boolean{inhaltsverzeichnis}} {
+    \tableofcontents
+    \clearpage
+} {}
+
+\pagenumbering{arabic}
