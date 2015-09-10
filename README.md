@@ -1,2 +1,22 @@
-# ba-gc-latex-vorlagen
-LaTeX-Vorlagen entsprechend der Richtlinien für wissenschaftliche Arbeiten an der BA Glauchau
+# LaTeX-Vorlagen für die BA Glauchau
+
+Ahoi. Du bist vermutlich hier gelandet, weil du nach "ba glauchau latex" o.ä. gegoogelt hast.
+Ist dies tatsächlich der Fall, darf ich dich beglückwünschen - hier bist du genau richtig.
+
+Im Rahmen des Praxisbelegs, den wir im zweiten Praxissemester anfertigen durften, habe ich die Chance genutzt
+und mir LaTeX mal genauer angeschaut. Zu meiner Überraschung fand ich auch Vorlagen eines anderen
+Student. pardon, Studierenden, welche mir jedoch nicht komplett gefallen haben, also habe ich kurzerhand
+meine eigenen Vorlagen gebastelt, die soweit auch den Richtlinien entsprechen dürften.
+
+Da ich meine Arbeit gern mit anderen teile, habe ich diese also einfach mal hier auf GitHub zur Verfügung
+gestellt.
+
+## Verwendung
+
+Die verwendung sollte insgesamt recht einfach ausfallen:
+
+1. `git clone https://github.com/ditti4/ba-gc-latex-vorlagen.git` oder wahlweise rechts in der Sidebar als ZIP herunterladen und entpacken
+1. `reportsettings.tex` im Hauptverzeichnis öffnen und entsprechend anpassen
+1. .tex-Hauptdatei anlegen und mit `\input{pre}` und `\input{post}` die beiden Loader-Dateien einbinden
+1. Hauptdatei befüllen (zwischen den beiden `\input{}`-Anweisungen) und mit pdflatex kompilieren.
+1. Über eine fertige PDF-Datei deiner wissenschaftlichen Arbeit freuen. Yay!
