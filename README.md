@@ -5,7 +5,7 @@ Ist dies tatsächlich der Fall, darf ich dich beglückwünschen - hier bist du g
 
 Im Rahmen des Praxisbelegs, den wir im zweiten Praxissemester anfertigen durften, habe ich die Chance genutzt
 und mir LaTeX mal genauer angeschaut. Zu meiner Überraschung fand ich auch Vorlagen eines anderen
-Student. pardon, Studierenden, welche mir jedoch nicht komplett gefallen haben, also habe ich kurzerhand
+Student… pardon, Studierenden, welche mir jedoch nicht komplett gefallen haben, also habe ich kurzerhand
 meine eigenen Vorlagen gebastelt, die soweit auch den Richtlinien entsprechen dürften.
 
 Da ich meine Arbeit gern mit anderen teile, habe ich diese also einfach mal hier auf GitHub zur Verfügung
