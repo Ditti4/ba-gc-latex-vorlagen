@@ -27,6 +27,12 @@ ausführen und eure Branches entsprechend mit`git checkout $branch` und `git reb
 Änderungen hochziehen. Danach einfach wieder neu kompilieren, fertig. Zudem sollte die `.gitignore` eventuell den
 eigenen Bedürfnissen angepasst werden (z.B. durch Entfernen des Eintrags für .bib-Dateien).
 
+## Was fehlt?
+
+Aktuell fehlt noch jegliche Verarbeitung von Tabellen und Abbildungen, da ich diese selbst noch nicht eingesetzt
+habe. Wer sich damit beschäftigen möchte, das möglichst nahe an den BA-Richtlinien umzusetzen, so möge diese Person
+doch bitte einen Pull request öffnen, damit ich weniger Arbeit damit habe (siehe auch [Mithelfen](#mithelfen)).
+
 ## Mithelfen
 
 Die Vorlagen sind unvollständig oder gar falsch? Unübersichtlich? Schlecht bedienbar? Die Einstellungen
