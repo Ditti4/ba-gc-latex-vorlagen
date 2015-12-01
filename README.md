@@ -21,6 +21,11 @@ Die verwendung sollte insgesamt recht einfach ausfallen:
 1. Hauptdatei befüllen (zwischen den beiden `\input{}`-Anweisungen) und mit pdflatex kompilieren.
 1. Über eine fertige PDF-Datei deiner wissenschaftlichen Arbeit freuen. Yay!
 
+Wer ganz klug ist, legt sich für jeden Beleg einen neuen Branch an. Wenn es hier dann mal Änderungen geben sollte,
+könnt ihr einfach wieder auf master-Branch wechseln, `git pull` ausführen und eure Branches entsprechend mit
+`git checkout $branch` und `git rebase master` auf die aktuellsten Änderungen hochziehen. Danach einfach wieder
+neu kompilieren, fertig.
+
 ## Mithelfen
 
 Die Vorlagen sind unvollständig oder gar falsch? Unübersichtlich? Schlecht bedienbar? Die Einstellungen
