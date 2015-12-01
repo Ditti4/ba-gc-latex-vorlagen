@@ -2,3 +2,6 @@
 *.aux
 *.bib
 *.pdf
+*.out
+*.xml
+*.toc

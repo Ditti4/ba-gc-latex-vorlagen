@@ -21,10 +21,11 @@ Die verwendung sollte insgesamt recht einfach ausfallen:
 1. Hauptdatei befüllen (zwischen den beiden `\input{}`-Anweisungen) und mit pdflatex kompilieren.
 1. Über eine fertige PDF-Datei deiner wissenschaftlichen Arbeit freuen. Yay!
 
-Wer ganz klug ist, legt sich für jeden Beleg einen neuen Branch an. Wenn es hier dann mal Änderungen geben sollte,
-könnt ihr einfach wieder auf master-Branch wechseln, `git pull` ausführen und eure Branches entsprechend mit
-`git checkout $branch` und `git rebase master` auf die aktuellsten Änderungen hochziehen. Danach einfach wieder
-neu kompilieren, fertig.
+Wer ganz klug ist und seinen Beleg sowieso mit git tracken möchte, der legt sich für jeden Beleg einen neuen Branch an.
+Wenn es hier dann mal Änderungen geben sollte, könnt ihr einfach wieder auf master-Branch wechseln, `git pull`
+ausführen und eure Branches entsprechend mit`git checkout $branch` und `git rebase master` auf die aktuellsten
+Änderungen hochziehen. Danach einfach wieder neu kompilieren, fertig. Zudem sollte die `.gitignore` eventuell den
+eigenen Bedürfnissen angepasst werden (z.B. durch Entfernen des Eintrags für .bib-Dateien).
 
 ## Mithelfen
 
