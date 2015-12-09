@@ -64,6 +64,10 @@
     \forloop{charcounter}{0}{\value{charcounter} < #1}{#2}
 }
 
+% Abkürzungen ausgeben und zum Verzeichnis hinzufügen
+% Aufruf erfolgt z. B. über \abk{z. B.}{zum Beispiel}
+\newcommand{\abk}[2]{#1\nomenclature{#1}{#2}}
+
 % Standardschriftartenfamilie auf Sans Serif festlegen
 \renewcommand{\familydefault}{\sfdefault}
 
