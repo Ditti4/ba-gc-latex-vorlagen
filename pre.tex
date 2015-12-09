@@ -23,4 +23,12 @@
     \clearpage
 } {}
 
+\ifthenelse{\boolean{abkuerzungsverzeichnis}} {
+    \makenomenclature
+    \renewcommand{\nomname}{Abkürzungsverzeichnis}
+    \printnomenclature
+    \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+    \clearpage
+} {}
+
 \pagenumbering{arabic}

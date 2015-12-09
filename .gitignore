@@ -5,3 +5,7 @@
 *.out
 *.xml
 *.toc
+*.ilg
+*.nlo
+*.nls
+*.gz
