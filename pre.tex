@@ -26,6 +26,7 @@
 \ifthenelse{\boolean{abkuerzungsverzeichnis}} {
     \makenomenclature
     \renewcommand{\nomname}{Abkürzungsverzeichnis}
+    \setlength{\nomitemsep}{-\parsep}
     \printnomenclature
     \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
     \clearpage

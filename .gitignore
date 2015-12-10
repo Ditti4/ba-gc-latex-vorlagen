@@ -9,3 +9,6 @@
 *.nlo
 *.nls
 *.gz
+*.bbl
+*.blg
+*.bak
