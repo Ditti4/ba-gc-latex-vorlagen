@@ -23,6 +23,16 @@
     \clearpage
 } {}
 
+\ifthenelse{\boolean{abbildungsverzeichnis}} {
+    \listoffigures
+    \addcontentsline{toc}{section}{Abbildungsverzeichnis}
+    \clearpage
+} {}
+
+% TODO: Tabellenverzeichnis
+
+% TODO: Formelverzeichnis
+
 \ifthenelse{\boolean{abkuerzungsverzeichnis}} {
     \makenomenclature
     \renewcommand{\nomname}{Abkürzungsverzeichnis}

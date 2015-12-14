@@ -48,6 +48,8 @@
 \usepackage{pdfpages}
 % Paket für ein einfaches Abkürzungsverzeichnis
 \usepackage[german]{nomencl}
+% Einbinden von Grafiken
+\usepackage{graphicx}
 
 % fortlaufende Fußnotennummerierung unabhängig vom Kapitel
 % nur bei scrreprt/report nötig
@@ -62,6 +64,17 @@
 \newcounter{charcounter}
 \newcommand{\rpt}[2]{
     \forloop{charcounter}{0}{\value{charcounter} < #1}{#2}
+}
+
+% simpler Befehl, um Abbildungen einzufügen
+% kümmert sich um das Einbinden, Bezeichnen und das Abbildungsverzeichnis
+% TODO: scaling – aktuell müssen alle Grafiken bereits richtig skaliert sein und das ist doof.
+\newcommand{\abb}[2]{
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics{#1}
+        \caption{#2}
+    \end{figure}
 }
 
 % Abkürzungen ausgeben und zum Verzeichnis hinzufügen
