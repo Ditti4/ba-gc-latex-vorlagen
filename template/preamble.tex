@@ -68,12 +68,16 @@
 
 % simpler Befehl, um Abbildungen einzufügen
 % kümmert sich um das Einbinden, Bezeichnen und das Abbildungsverzeichnis
-% TODO: scaling – aktuell müssen alle Grafiken bereits richtig skaliert sein und das ist doof.
-\newcommand{\abb}[2]{
+% nun sind auch Optionen für \includegraphics verfügbar (optional) und der neue
+% Pflichtparameter für \label wurde eingeführt. Ein Aufruf kann nun also so
+% aussehen:
+% \abb[width=2cm, keepaspectratio]{test.png}{Ein Testbild}{img:testbild}
+\newcommand{\abb}[4][]{
     \begin{figure}[htbp]
         \centering
-        \includegraphics{#1}
-        \caption{#2}
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#4}
     \end{figure}
 }
 
