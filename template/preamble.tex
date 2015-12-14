@@ -71,13 +71,13 @@
 % nun sind auch Optionen für \includegraphics verfügbar (optional) und der neue
 % Pflichtparameter für \label wurde eingeführt. Ein Aufruf kann nun also so
 % aussehen:
-% \abb[width=2cm, keepaspectratio]{test.png}{Ein Testbild}{img:testbild}
-\newcommand{\abb}[4][]{
+% \abb[width=2cm, keepaspectratio]{test.png}{Ein Testbild}
+\newcommand{\abb}[3][]{
     \begin{figure}[htbp]
         \centering
         \includegraphics[#1]{#2}
         \caption{#3}
-        \label{#4}
+        \label{img:#2}
     \end{figure}
 }
 
