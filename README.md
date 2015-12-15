@@ -36,6 +36,11 @@ doch bitte einen Pull request öffnen, damit ich weniger Arbeit damit habe (sieh
 Zudem fehlt noch eine mehr oder weniger vernünftige Dokumentation aller Befehle, die die Vorlage hier bietet. Dafür soll,
 wenn alles gut geht, bald™ mal das Wiki des Repositories genutzt werden, um alles möglichst zentral zu halten.
 
+Außerdem, wobei ich nicht weiß, ob man das einfach mit LaTeX lösen kann, ist es aktuell auch noch so, dass mehrere Publikationen
+von einem Autor, die im gleichen Jahr erschienen sind, *nicht* mit einem Index versehen werden, so wie es Punkt 3.3.3.5 eigentlich
+vorschreibt (siehe Tabelle 6). Trifft exakt dieser Fall auf jemanden zu, so muss bitte beim Anlegen der Bibliographie darauf
+geachtet werden, dass der Index selbst hinzugefügt wird.
+
 ## Mithelfen
 
 Die Vorlagen sind unvollständig oder gar falsch? Unübersichtlich? Schlecht bedienbar? Die Einstellungen
