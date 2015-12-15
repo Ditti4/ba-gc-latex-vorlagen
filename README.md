@@ -11,6 +11,11 @@ meine eigenen Vorlagen gebastelt, die soweit auch den Richtlinien entsprechen d�
 Da ich meine Arbeit gern mit anderen teile, habe ich diese also einfach mal hier auf GitHub zur Verfügung
 gestellt.
 
+*Wichtige Anmerkung*: ich sehe diese Vorlagen keinesfalls als "State of the art" an. Es besteht viel Verbesserungsbedarf,
+als richtige Dokumentenklasse würde sich das ganze vermutlich auch besser eignen, es fehlt viel und ich löse viele Probleme
+vermutlich sehr, sehr unschön. Wenn dri irgendwas nicht gefällt, dann geh bitte nicht einfach, sondern [hilf mit](#mithelfen),
+dieses Projekt zu verbessern und zu vervollständigen, damit es nachfolgende Studenten einfacher haben als wir. Danke.
+
 ## Verwendung
 
 Die verwendung sollte insgesamt recht einfach ausfallen:
