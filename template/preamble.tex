@@ -44,12 +44,14 @@
 \usepackage{color}
 % ToDo-Stuff, recht offensichtlich
 \usepackage{todonotes}
-% Zum Einbinden des Themenvorschlags
+% zum Einbinden des Themenvorschlags
 \usepackage{pdfpages}
 % Paket für ein einfaches Abkürzungsverzeichnis
 \usepackage[german]{nomencl}
 % Einbinden von Grafiken
 \usepackage{graphicx}
+% zur Modifizierung der einzelnen Einträge von TOC, LOF und LOT benötigt
+\usepackage{tocloft}
 
 % fortlaufende Fußnotennummerierung unabhängig vom Kapitel
 % nur bei scrreprt/report nötig
@@ -85,21 +87,15 @@
 % Aufruf erfolgt z. B. über \abk{z. B.}{zum Beispiel}
 \newcommand{\abk}[2]{#1\nomenclature{#1}{#2}}
 
-% Standardschriftartenfamilie auf Sans Serif festlegen
-\renewcommand{\familydefault}{\sfdefault}
-
-% kein Absatzeinschub
-\setlength{\parindent}{0mm}
+% ursprünglich für urldate genutzt, nun nicht mehr
+% wird vielleicht aber irgendwann nochmal nützlich, deswegen bleibt es
+\newcommand{\swallowarialspace}{\kern-0.55ex}
 
 % Befehle für das Titelblatt einbinden
 \input{template/preamble_title_cmds}
 
 % Header- und Footer-Style festlegen
 \input{template/preamble_style}
-
-% ursprünglich für urldate genutzt, nun nicht mehr
-% wird vielleicht aber irgendwann nochmal nützlich, deswegen bleibt es
-\newcommand{\swallowarialspace}{\kern-0.55ex}
 
 % Definitionen und Befehle für das Literatütenverzeichnis
 \input{template/preamble_bib}

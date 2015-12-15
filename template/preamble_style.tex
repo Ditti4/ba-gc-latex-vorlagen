@@ -14,7 +14,39 @@
     \renewcommand{\footrulewidth}{0.4pt}
 }
 
+% irgendwas mit den Fußnoten … alles viel zu lange her
 \setlength{\footnotesep}{10pt}
+% kein Absatzeinschub
+\setlength{\parindent}{0pt}
+
+% Standardschriftartenfamilie auf Sans Serif festlegen
+\renewcommand{\familydefault}{\sfdefault}
+
+% in den Verzeichnissen die Punkte zum Auffüllen bis zur Seitenzahl direkt
+% hintereinander ausgeben (ohne echten Abstand)
+\renewcommand{\cftdotsep}{0.1}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% Inhaltsverzeichnis richtig einrücken
+\cftsetindents{section}{0em}{55pt}
+\cftsetindents{subsection}{0em}{55pt}
+\cftsetindents{subsubsection}{0em}{55pt}
+\cftsetindents{paragraph}{0em}{55pt}
+
+% Abbildungsverzeichnis richtig einrücken und fett drucken
+\setlength{\cftfigindent}{0pt}
+% etwas großzügiger bemessen, damit auch Abbildungen mit zweistelligen Nummern
+% noch ins Verzeichnis passen
+% komplett den Richtlinien entsprechend wäre irgendwas in Richtung 80-85pt
+\setlength{\cftfignumwidth}{90pt}
+\renewcommand{\cftfigpresnum}{\bfseries{}Abbildung }
+\renewcommand{\cftfigaftersnum}{\normalfont}
+
+% TODO: das gleiche Spiel für das Tabellenverzeichnis
+
+% Abkürzungsverzeichnis
+\renewcommand{\nomname}{Abkürzungsverzeichnis}
+\setlength{\nomitemsep}{-\parsep}
 
 \definecolor{brown}{RGB}{204,102,0}
 \definecolor{darkgreen}{RGB}{0,102,0}
