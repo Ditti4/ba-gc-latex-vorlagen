@@ -17,3 +17,6 @@
 *.lof
 *.bmp
 *.gif
+*.c
+*.py
+*.cpp

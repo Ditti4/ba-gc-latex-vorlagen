@@ -32,6 +32,12 @@
 \cftsetindents{subsection}{0em}{55pt}
 \cftsetindents{subsubsection}{0em}{55pt}
 \cftsetindents{paragraph}{0em}{55pt}
+% um ganz den Richtlinien zu entsprechen, muss der Abstand zwischen Kapiteln
+% genauso groß sein wie der zwischen Unterkapiteln, das sieht jedoch schrecklich
+% und sehr unübersichtlich aus
+% wer sich das dennoch freiwillig antun möchte, darf bei der folgenden Zeile
+% gern das % entfernen
+%\setlength{\cftbeforesecskip}{0pt}
 
 % Abbildungsverzeichnis richtig einrücken und fett drucken
 \setlength{\cftfigindent}{0pt}
@@ -54,6 +60,17 @@
 \lstdefinestyle{coloredpython}{
     breaklines=true,
     language=Python,
+    showspaces=false,
+    showstringspaces=false,
+    basicstyle=\footnotesize,
+    commentstyle=\color{darkgreen},
+    keywordstyle=\color{blue},
+    stringstyle=\color{brown},
+}
+
+\lstdefinestyle{coloredc}{
+    breaklines=true,
+    language=C,
     showspaces=false,
     showstringspaces=false,
     basicstyle=\footnotesize,
