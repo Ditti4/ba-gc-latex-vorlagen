@@ -87,6 +87,19 @@
 % Aufruf erfolgt z. B. über \abk{z. B.}{zum Beispiel}
 \newcommand{\abk}[2]{#1\nomenclature{#1}{#2}}
 
+% Befehle für Anhänge
+% (gediebt vom LaTeX Stack Exchange)
+\newcommand{\listappendicesname}{Anhangverzeichnis}
+\newlistof{appendices}{apc}{\listappendicesname}
+\newcommand{\anhang}[1]{
+    \clearpage
+    \refstepcounter{appendices}
+    \fancyhf{}
+    \fancyhead[R]{Anhang \theappendices}
+    \fancyhead[L]{#1}
+    \addcontentsline{apc}{appendices}{Anhang \theappendices\hspace{35pt}#1}
+}
+
 % ursprünglich für urldate genutzt, nun nicht mehr
 % wird vielleicht aber irgendwann nochmal nützlich, deswegen bleibt es
 \newcommand{\swallowarialspace}{\kern-0.55ex}

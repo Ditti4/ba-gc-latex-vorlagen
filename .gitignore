@@ -20,3 +20,5 @@
 *.c
 *.py
 *.cpp
+*.apc
+appendices.tex

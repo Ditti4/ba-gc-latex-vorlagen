@@ -1,7 +1,17 @@
+\clearpage
 \ifthenelse{\boolean{literaturverzeichnis}} {
-        \clearpage
-        \printbibliography
+    \addcontentsline{toc}{section}{Quellenverzeichnis}
+    \printbibliography
+    \clearpage
 }{}
+
+\ifthenelse{\boolean{anhangverzeichnis}} {
+    \addcontentsline{toc}{section}{\listappendicesname}
+    \listofappendices
+    \clearpage
+}{}
+
+\include{appendices}
 
 \ifthenelse{\value{authorcount} = 1}{
         \include{template/ehrenwoertliche_erklaerung}
