@@ -78,3 +78,21 @@
     keywordstyle=\color{blue},
     stringstyle=\color{brown},
 }
+
+% gediebt von http://tex.stackexchange.com/a/50263
+\lstdefinelanguage{diff}{
+    morecomment=[f][\color{blue}]{@@},
+    morecomment=[f][\color{red}]{-},
+    morecomment=[f][\color{green}]{+},
+    morecomment=[f][\color{magenta}]{---},
+    morecomment=[f][\color{magenta}]{+++},
+}
+
+% heißt nur wegen der Konsistenz *colored*diff, denn farbig ist er auch schon durch die Defintion
+\lstdefinestyle{coloreddiff}{
+    breaklines=true,
+    language=diff,
+    showspaces=false,
+    showstringspaces=false,
+    basicstyle=\footnotesize,
+}
