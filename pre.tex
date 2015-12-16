@@ -8,9 +8,9 @@
 
 \begin{document}
 \ifthenelse{\value{authorcount} = 1} {
-    \input{template/titelblatt}
+    \include{template/titelblatt}
 }{
-    \input{template/titelblatt_multi}
+    \include{template/titelblatt_multi}
 }
 
 \ifthenelse{\boolean{themenvorschlag}} {

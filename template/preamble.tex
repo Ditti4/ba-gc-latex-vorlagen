@@ -3,8 +3,6 @@
 % Vorgabe der BA-Glauchau: Schriftgroesse: 12pt, A4. Blocksatz
 \documentclass[fontsize=12pt, paper=a4, utf8]{scrartcl}
 
-% Vorgabe der BA-Glauchau: Raender links 2.5cm, rechts 2.5cm, oben 2cm, unten 2cm
-\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2cm, bottom=2cm, bindingoffset=5mm, footskip=20pt, includeheadfoot]{geometry}
 \usepackage{lmodern}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
@@ -24,15 +22,11 @@
 % yay, fancy stuff (Header und Footer)
 \usepackage{fancyhdr}
 % Lorem Ipsum is love, Lorem Ipsum is life
-\usepackage{lipsum}
+%\usepackage{lipsum}
 \usepackage{setspace}
 \usepackage{forloop}
-% sollte irgendwann mal irgendjemand \textsubscript brauchen
-\usepackage{fixltx2e}
 % Paketname sprich für sich
 \usepackage{ifthen}
-% colorlinks = true, damit kein hässlicher Rahmen um die Links herum entsteht
-\usepackage[linkcolor=black, urlcolor=black, citecolor=black, colorlinks=true]{hyperref}
 % auf Rechnern mit Biber bitte den backend-Parameter entfernen, ist nur wieder
 % ein kleiner Hack für meinen Arbeitslaptop
 \usepackage[backend=bibtex]{biblatex}
@@ -52,6 +46,10 @@
 \usepackage{graphicx}
 % zur Modifizierung der einzelnen Einträge von TOC, LOF und LOT benötigt
 \usepackage{tocloft}
+% colorlinks = true, damit kein hässlicher Rahmen um die Links herum entsteht
+\usepackage[linkcolor=black, urlcolor=black, citecolor=black, colorlinks=true]{hyperref}
+% Vorgabe der BA-Glauchau: Raender links 2.5cm, rechts 2.5cm, oben 2cm, unten 2cm
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2cm, bottom=2cm, bindingoffset=5mm, footskip=20pt, includeheadfoot]{geometry}
 
 % fortlaufende Fußnotennummerierung unabhängig vom Kapitel
 % nur bei scrreprt/report nötig
