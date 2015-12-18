@@ -21,30 +21,15 @@
 \vspace{1cm}
 \begin{tabular}{>{\bfseries}p{3.5cm}ll}
 Vorgelegt am: & \submissiondate{} \vspace{1cm} \\
-Von: 
+Von:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-& \textbf{\authoronename{}} \\
-& \authoroneaddress{} \\
-& \authoronepostalcity{} \\
-& \textbf{Matrikelnummer:} \authoronestudentnumber{} \\
-& \textbf{Studienrichtung:} \authoronestudybranch{} \vspace{1cm} \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifthenelse{\value{authorcount} > 1} {
-& \textbf{\authortwoname{}} \\
-& \authortwoaddress{} \\
-& \authortwopostalcity{} \\
-& \textbf{Matrikelnummer:} \authortwostudentnumber{} \\
-& \textbf{Studienrichtung:} \authortwostudybranch{} \vspace{1cm} \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifthenelse{\value{authorcount} > 2} {
-& \textbf{\authorthreename{}} \\
-& \authorthreeaddress{} \\
-& \authorthreepostalcity{} \\
-& \textbf{Matrikelnummer:} \authorthreestudentnumber{} \\
-& \textbf{Studienrichtung:} \authorthreestudybranch{} \vspace{1cm} \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-}{}
-}{}
+\forloop{helpcounter}{0}{\value{helpcounter} < \value{authorcount}}{
+& \textbf{\csuse{authorname\thehelpcounter}} \\
+& \csuse{authoraddress\thehelpcounter} \\
+& \csuse{authorpostalcity\thehelpcounter} \\
+& \textbf{Matrikelnummer:} \csuse{authorstudentnumber\thehelpcounter} \\
+& \textbf{Studienrichtung:} \csuse{authorstudybranch\thehelpcounter} \vspace{1cm} \\
+}
 Studiengang: & \studypath \vspace{1cm} \\
 Seminargruppe: & \studygroup \vspace{1cm} \\
 Gutachter: & \universityreviewername{} \\

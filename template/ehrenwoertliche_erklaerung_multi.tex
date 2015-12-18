@@ -27,14 +27,8 @@ Wir sind uns bewusst, dass eine falsche Erklärung rechtliche Folgen haben wird.
 \vspace{2cm}
 
 \begin{tabular}{p{7cm}lp{7cm}l}
+\forloop{helpcounter}{0}{\value{helpcounter} < \value{authorcount}}{
 \rule{7cm}{0.4pt} & \rule{7cm}{0.4pt} \\
 Ort, Datum & Unterschrift \vspace{1cm} \\
-\ifthenelse{\value{authorcount} > 1} {
-\rule{7cm}{0.4pt} & \rule{7cm}{0.4pt} \\
-Ort, Datum & Unterschrift \vspace{1cm} \\
-\ifthenelse{\value{authorcount} > 2} {
-\rule{7cm}{0.4pt} & \rule{7cm}{0.4pt} \\
-Ort, Datum & Unterschrift \vspace{1cm} \\
-}{}
-}{}
+}
 \end{tabular}
