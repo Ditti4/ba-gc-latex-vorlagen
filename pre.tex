@@ -17,12 +17,12 @@
     \includepdf[pages={1}]{Themenvorschlag.pdf}
 } {}
 
-\ifthenelse{\boolean{inhaltsverzeichnis}} {
+\ifthenelse{\totvalue{section} > 0} {
     \tableofcontents
     \clearpage
 } {}
 
-\ifthenelse{\boolean{abbildungsverzeichnis}} {
+\ifthenelse{\totvalue{figure} > 0} {
     \listoffigures
     \addcontentsline{toc}{section}{Abbildungsverzeichnis}
     \clearpage
@@ -32,7 +32,7 @@
 
 % TODO: Formelverzeichnis
 
-\ifthenelse{\boolean{abkuerzungsverzeichnis}} {
+\ifthenelse{\totvalue{abbreviation} > 0} {
     \makenomenclature
     \printnomenclature
     \addcontentsline{toc}{section}{Abkürzungsverzeichnis}

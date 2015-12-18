@@ -27,6 +27,8 @@
 \usepackage{forloop}
 % Paketname sprich für sich
 \usepackage{ifthen}
+% Gesamtanzahl von \section{}s und Co.
+\usepackage{totcount}
 % auf Rechnern mit Biber bitte den backend-Parameter entfernen, ist nur wieder
 % ein kleiner Hack für meinen Arbeitslaptop
 \usepackage[backend=bibtex]{biblatex}
@@ -59,6 +61,11 @@
 % \chapter gibt es bei article nicht, deswegen sectionbreak
 \newcommand{\sectionbreak}{\clearpage}
 
+% totcount-Zähler für Sektionen, Abbildungen und in Zukunft vermutlich noch mehr registrieren
+\regtotcounter{section}
+\regtotcounter{figure}
+\newtotcounter{abbreviation}
+
 % wiederholt Zeichenketten gewünscht oft
 % wird z.B. in der ehrenwörtlichen Erklärung verwendet
 \newcounter{charcounter}
@@ -83,7 +90,7 @@
 
 % Abkürzungen ausgeben und zum Verzeichnis hinzufügen
 % Aufruf erfolgt z. B. über \abk{z. B.}{zum Beispiel}
-\newcommand{\abk}[2]{#1\nomenclature{#1}{#2}}
+\newcommand{\abk}[2]{#1\nomenclature{#1}{#2}\stepcounter{abbreviation}}
 
 % Befehle für Anhänge
 % (gediebt vom LaTeX Stack Exchange)
