@@ -1,11 +1,11 @@
 \clearpage
-\ifthenelse{\boolean{literaturverzeichnis}} {
+\ifthenelse{\totvalue{instcount} > 0} {
     \addcontentsline{toc}{section}{Quellenverzeichnis}
     \printbibliography
     \clearpage
 }{}
 
-\ifthenelse{\boolean{anhangverzeichnis}} {
+\ifthenelse{\totvalue{appendices} > 0} {
     \addcontentsline{toc}{section}{\listappendicesname}
     \listofappendices
 }{}
