@@ -94,7 +94,11 @@
 
 % Abkürzungen ausgeben und zum Verzeichnis hinzufügen
 % Aufruf erfolgt z. B. über \abk{z. B.}{zum Beispiel}
-\newcommand{\abk}[2]{#1\nomenclature{#1}{#2}\stepcounter{abbreviation}}
+% ist der optionale Parameter mit jeglichem Inhalt gefüllt, wird angenommen,
+% dass die Abkürzung in einer Wortzusammensetzung verwendet wird - in diesem
+% Fall wird kein Leerzeichen vor der Klammer gesetzt
+% für mehr Infos dazu siehe http://www.duden.de/sprachwissen/sprachratgeber/klammern-und-bindestrich
+\newcommand{\abk}[3][]{\ifthenelse{\equal{#1}{}}{#3 (#2)}{#3(#2)}\nomenclature{#2}{#3}\stepcounter{abbreviation}}
 
 % Befehle für Anhänge
 % (gediebt vom LaTeX Stack Exchange)
