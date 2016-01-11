@@ -5,6 +5,10 @@
     \clearpage
 }{}
 
+\ifthenelse{\value{onlinerefs} > 0 \and \value{nononlinerefs} = 0} {
+    \message{LaTeX Warning: Die Arbeit bindet ausschliesslich Internetquellen ein.}
+}{}
+
 \ifthenelse{\totvalue{appendices} > 0} {
     \addcontentsline{toc}{section}{\listappendicesname}
     \listofappendices
@@ -13,9 +17,9 @@
 \include{appendices}
 
 \ifthenelse{\value{authorcount} = 1}{
-        \include{template/ehrenwoertliche_erklaerung}
+    \include{template/ehrenwoertliche_erklaerung}
 }{
-        \include{template/ehrenwoertliche_erklaerung_multi}
+    \include{template/ehrenwoertliche_erklaerung_multi}
 }
 
 \end{document}
