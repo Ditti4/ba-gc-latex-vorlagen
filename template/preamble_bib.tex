@@ -7,16 +7,6 @@
 \DeclareFieldFormat{url}{\bibstring{urlin}\addcolon\space\url{#1}}
 \DeclareFieldFormat{urldate}{(#1)}
 
-% Zitat-Befehle, zugeschnitten auf die Richtlinien der BA Glauchau
-
-\newcounter{nononlinerefs}
-\newcommand{\indcite}[2][]{\stepcounter{nononlinerefs}\footnote{vgl. \citeauthor{#2}, \citeyear[][#1]{#2}}}
-
-\newcommand{\litcite}[2][]{\stepcounter{nononlinerefs}\footnote{\citeauthor{#2}, \citeyear[][#1]{#2}}}
-
-% FIXME: warum funktioniert das nicht?
-%\newcommand{\seccite}[4][][]{\stepcounter{nononlinerefs}\footnote{\citeauthor{#3}, \citeyear[][#1]{#3} zit. nach \citeauthor{#4}, \citeyear[][#2]{#4}}}
-
 \DeclareCiteCommand{\citeurldate}
 {\boolfalse{citetracker}
 \boolfalse{pagetracker}
@@ -25,8 +15,21 @@
 {\multicitedelim}
 {\usebibmacro{postnote}}
 
+% Zitat-Befehle, zugeschnitten auf die Richtlinien der BA Glauchau
+% die Counter werden für eine Warnung vor der ausschließlichen Verwendung von
+% Internetquellen genutzt
+% zum Deaktivieren der Warnung kann der Counter nononlinerefs auf einen Wert
+% ungleich 0 gesetzt werden
 \newcounter{onlinerefs}
 \newcommand{\onlinecite}[2][]{\stepcounter{onlinerefs}\footnote{online: \citeauthor{#2}, \citeyear[][#1]{#2}\swallowarialspace{}\citeurldate{#2}}}
+
+\newcounter{nononlinerefs}
+\newcommand{\indcite}[2][]{\stepcounter{nononlinerefs}\footnote{vgl. \citeauthor{#2}, \citeyear[][#1]{#2}}}
+
+\newcommand{\litcite}[2][]{\stepcounter{nononlinerefs}\footnote{\citeauthor{#2}, \citeyear[][#1]{#2}}}
+
+% FIXME: warum funktioniert das nicht?
+%\newcommand{\seccite}[4][][]{\stepcounter{nononlinerefs}\footnote{\citeauthor{#3}, \citeyear[][#1]{#3} zit. nach \citeauthor{#4}, \citeyear[][#2]{#4}}}
 
 \DeclareNameAlias{default}{last-first}
 

@@ -11,18 +11,10 @@
 {\large \reporttopic}
 \end{center}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Für eine weitere Person einfach den Abschnitt zwischen
-% zwei %-Linien kopieren und die Werte entsprechend an-
-% passen.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{1cm}
 \begin{tabular}{>{\bfseries}p{3.5cm}ll}
 Vorgelegt am: & \submissiondate{} \vspace{1cm} \\
 Von:
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \forloop{helpcounter}{0}{\value{helpcounter} < \value{authorcount}}{
 & \textbf{\csuse{authorname\thehelpcounter}} \\
 & \csuse{authoraddress\thehelpcounter} \\
