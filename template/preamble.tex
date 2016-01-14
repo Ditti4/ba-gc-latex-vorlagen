@@ -44,6 +44,8 @@
 \usepackage{pdfpages}
 % Paket für ein einfaches Abkürzungsverzeichnis
 \usepackage[german]{nomencl}
+% Ersetzen von Strings ermöglichen (bei den Abkürzungen genutzt)
+\usepackage{xstring}
 % Einbinden von Grafiken
 \usepackage{graphicx}
 % zur Modifizierung der einzelnen Einträge von TOC, LOF und LOT benötigt
@@ -98,7 +100,7 @@
 % dass die Abkürzung in einer Wortzusammensetzung verwendet wird - in diesem
 % Fall wird kein Leerzeichen vor der Klammer gesetzt
 % für mehr Infos dazu siehe http://www.duden.de/sprachwissen/sprachratgeber/klammern-und-bindestrich
-\newcommand{\abk}[3][]{\ifthenelse{\equal{#1}{}}{#3 (#2)}{#3(#2)}\nomenclature{#2}{#3}\stepcounter{abbreviation}}
+\newcommand{\abk}[3][]{\ifthenelse{\equal{#1}{}}{#3 (#2)}{\StrSubstitute[0]{#3}{ }{-}(#2)}\nomenclature{#2}{#3}\stepcounter{abbreviation}}
 
 % Befehle für Anhänge
 % (gediebt von http://tex.stackexchange.com/a/26740)
