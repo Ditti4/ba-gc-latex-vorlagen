@@ -1,32 +1,40 @@
 \thispagestyle{empty}
 
 \begin{center}
-\textbf{\large Ehrenwörtliche Erklärung}
+	\textbf{\large Ehrenwörtliche Erklärung}
 \end{center}
 \vspace{0.5cm}
-,,Ich erkläre hiermit ehrenwörtlich``,
+
+,,\ifthenelse{\value{authorcount} = 1}{Ich erkläre}{Wir erklären}\space
+hiermit ehrenwörtlich``
 \vspace{1cm}
 \begin{enumerate}
-\item[1.] dass ich meine \rpt{60}{.} mit dem Thema
+\item[1.]  
+dass \ifthenelse{\value{authorcount} = 1}{ich meine}{wir unsere}\space
+\reporttype \space mit dem Thema:
 
-\rpt{25}{…} \\
-\rpt{25}{…} \\
-\rpt{25}{…}
+,,\reporttopic``
 
-ohne fremde Hilfe angefertigt habe,
+ohne fremde Hilfe angefertigt habe\ifthenelse{\value{authorcount} > 1}{n},
 
-\item[2.] dass ich die Übernahme wörtlicher Zitate aus der Literatur sowie die
-Verwendung der Gedanken anderer Autoren an den entsprechenden Stellen
-innerhalb der Arbeit gekennzeichnet habe und
+\item[2.] dass\space
+\ifthenelse{\value{authorcount} = 1}{ich}{wir}\space
+die Übernahme wörtlicher Zitate aus der Literatur sowie die Verwendung der Gedanken anderer Autoren an den entsprechenden Stellen innerhalb der Arbeit gekennzeichnet habe\ifthenelse{\value{authorcount} > 1}{n}\space
 
-\item[3.] dass ich meine \rpt{40}{.} bei keiner anderen Prüfung vor\-ge\-legt habe.
+\item[3.] dass\space
+\ifthenelse{\value{authorcount} = 1}{ich}{wir}\space
+diese \reporttype\space bei keiner anderen Prüfung vorgelegt habe\ifthenelse{\value{authorcount} > 1}{n}.
 
 \end{enumerate}
 \vspace{1cm}
-Ich bin mir bewusst, dass eine falsche Erklärung rechtliche Folgen haben wird.
+\ifthenelse{\value{authorcount} = 1}{Ich bin mir}{Wir sind uns}\space
+bewusst, dass eine falsche Erklärung rechtliche Folgen haben wird.
 \vspace{2cm}
 
 \begin{tabular}{p{7cm}lp{7cm}l}
-\rule{7cm}{0.4pt} & \rule{7cm}{0.4pt} \\
-Ort, Datum & Unterschrift \\
+	\rpt{\value{authorcount}}{
+		\rule{7cm}{0.4pt} & \rule{7cm}{0.4pt} \\
+		Ort, Datum & Unterschrift \\
+		\vspace{1cm} & \vspace{1cm}	\\
+	}
 \end{tabular}
