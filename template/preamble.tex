@@ -29,9 +29,9 @@
 \usepackage{ifthen}
 % Gesamtanzahl von \section{}s und Co.
 \usepackage{totcount}
-% auf Rechnern mit Biber bitte den backend-Parameter entfernen, ist nur wieder
-% ein kleiner Hack für meinen Arbeitslaptop
-\usepackage[backend=bibtex]{biblatex}
+% Anzahl der maximal aufgelisteten Autoren auf drei beschränken,
+% bei mehr als drei Autoren nur einen ausschreiben, danach "u.a."
+\usepackage[backend=bibtex,mincitenames=1,maxcitenames=3,minbibnames=1,maxbibnames=3]{biblatex}
 % benötigt für sectionbreak
 \usepackage{titlesec}
 % Inline-Code-Snippets
