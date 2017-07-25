@@ -26,11 +26,16 @@
 % ungleich 0 gesetzt werden
 \newcounter{onlinerefs}
 \newcommand{\onlinecite}[2][]{\stepcounter{onlinerefs}\footnote{online: \citeauthor{#2}, \citeyear[][#1]{#2}\swallowarialspace{}\citeurldate{#2}}}
+% \onlinesource funktioniert ähnlich wie \onlinecite, jedoch wird mit source keine Fußnote angelegt, sondern die Quellenangabe wird direkt ausgeschrieben
+% das gleiche gilt für die übrigen *source-Befehle
+\newcommand{\onlinesource}[2][]{\stepcounter{onlinerefs}online: \citeauthor{#2}, \citeyear[][#1]{#2}\swallowarialspace{}\citeurldate{#2}}
 
 \newcounter{nononlinerefs}
 \newcommand{\indcite}[2][]{\stepcounter{nononlinerefs}\footnote{vgl. \citeauthor{#2}, \citeyear[][#1]{#2}}}
+\newcommand{\indsource}[2][]{\stepcounter{nononlinerefs}vgl. \citeauthor{#2}, \citeyear[][#1]{#2}}
 
 \newcommand{\litcite}[2][]{\stepcounter{nononlinerefs}\footnote{\citeauthor{#2}, \citeyear[][#1]{#2}}}
+\newcommand{\litsource}[2][]{\stepcounter{nononlinerefs}\citeauthor{#2}, \citeyear[][#1]{#2}}
 
 % FIXME: warum funktioniert das nicht?
 %\newcommand{\seccite}[4][][]{\stepcounter{nononlinerefs}\footnote{\citeauthor{#3}, \citeyear[][#1]{#3} zit. nach \citeauthor{#4}, \citeyear[][#2]{#4}}}
