@@ -29,6 +29,8 @@
 % \onlinesource funktioniert ähnlich wie \onlinecite, jedoch wird mit source keine Fußnote angelegt, sondern die Quellenangabe wird direkt ausgeschrieben
 % das gleiche gilt für die übrigen *source-Befehle
 \newcommand{\onlinesource}[2][]{\stepcounter{onlinerefs}online: \citeauthor{#2}, \citeyear[][#1]{#2}\swallowarialspace{}\citeurldate{#2}}
+\newcommand{\indonlinecite}[2][]{\stepcounter{onlinerefs}\footnote{vgl. online: \citeauthor{#2}, \citeyear[][#1]{#2}\swallowarialspace{}\citeurldate{#2}}}
+\newcommand{\indonlinesource}[2][]{\stepcounter{onlinerefs}vgl. online: \citeauthor{#2}, \citeyear[][#1]{#2}\swallowarialspace{}\citeurldate{#2}}
 
 \newcounter{nononlinerefs}
 \newcommand{\indcite}[2][]{\stepcounter{nononlinerefs}\footnote{vgl. \citeauthor{#2}, \citeyear[][#1]{#2}}}
