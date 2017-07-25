@@ -56,6 +56,8 @@
 \usepackage[linkcolor=black, urlcolor=black, citecolor=black, colorlinks=true]{hyperref}
 % Vorgabe der BA-Glauchau: Raender links 2.5cm, rechts 2.5cm, oben 2cm, unten 2cm
 \usepackage[a4paper, left=2.5cm, right=2.5cm, top=2cm, bottom=2cm, bindingoffset=5mm, footskip=20pt, includeheadfoot]{geometry}
+% Stellt \caption*-Befehl bereit; wird benutzt, um Bildern eine Quellenangabe zu geben
+\usepackage{caption}
 
 % fortlaufende Fußnotennummerierung unabhängig vom Kapitel
 % nur bei scrreprt/report nötig
@@ -85,11 +87,14 @@
 % Pflichtparameter für \label wurde eingeführt. Ein Aufruf kann nun also so
 % aussehen:
 % \abb[width=2cm, keepaspectratio]{test.png}{Ein Testbild}
-\newcommand{\abb}[3][]{
+\newcommand{\abb}[4][]{
     \begin{figure}[htbp]
         \centering
         \includegraphics[#1]{#2}
         \caption{#3}
+        \ifthenelse{\equal{#4}{}}{}{
+            \caption*{(#4)}
+        }
         \label{img:#2}
     \end{figure}
 }
